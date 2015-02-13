@@ -27,6 +27,12 @@ class TicketsController < ApplicationController
   end
 
   def destroy
+    find_ticket
+    if @ticket.destroy
+      redirect_to tickets_path
+    else
+      render :index
+    end
   end
 
 private

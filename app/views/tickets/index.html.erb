@@ -18,6 +18,9 @@
 		<strong>Title:</strong> <%= ticket.title %>
 		<br>
 		<strong>Description:</strong> <%= ticket.description %>
+		<br>
+		<%= link_to "delete", ticket, method: :delete, class: "btn btn-default" %>
+		<br>
 		<hr>
 	<% end %>
 
