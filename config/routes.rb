@@ -1,21 +1,9 @@
 Rails.application.routes.draw do
-
-  get 'tickets/index'
-
-  get 'tickets/new'
-
-  get 'tickets/create'
-
-  get 'tickets/show'
-
-  get 'tickets/edit'
-
-  get 'tickets/update'
-
-  get 'tickets/destroy'
+  
+  resources :tickets
 
   devise_for :users
-  root "home#index"
+  root "tickets#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
